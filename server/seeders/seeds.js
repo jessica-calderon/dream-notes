@@ -1,6 +1,6 @@
 // const faker = require('faker');
 const userSeeds = require("./userSeed.json");
-const dreamSeeds = require("./thoughtSeed.json");
+const dreamSeeds = require("./dreamSeed.json");
 const db = require("../config/connection");
 const { Dream, User } = require("../models");
 
@@ -17,7 +17,7 @@ db.once("open", async () => {
         { username: dreamAuthor },
         {
           $addToSet: {
-            thoughts: _id,
+            dreams: _id,
           },
         }
       );

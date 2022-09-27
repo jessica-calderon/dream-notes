@@ -16,11 +16,11 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className=''>
-        
+        <Header />
         <div className='container'>
         <Home />
       </div>
-      
+      <Footer />
       </div>
     </ApolloProvider>
 

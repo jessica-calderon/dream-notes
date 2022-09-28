@@ -8,11 +8,26 @@ const db = require("./config/connection");
 
 const PORT = process.env.PORT || 3003;
 
+const {
+    ApolloServerPluginLandingPageProductionDefault,
+    ApolloServerPluginLandingPageLocalDefault
+   } = require('apollo-server-core');
+
+
 const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  context: authMiddleware,
+    typeDefs,
+    resolvers,
+    plugins: [
+        process.env.NODE_ENV === "production"
+          ? ApolloServerPluginLandingPageProductionDefault({
+              embed: true,
+              graphRef: "plaid-gufzoj@current"
+            })
+          : ApolloServerPluginLandingPageLocalDefault({ embed: true })
+     ],
+    context: authMiddleware
 });
+
 
 const app = express();
 

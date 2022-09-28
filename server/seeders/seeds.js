@@ -1,6 +1,6 @@
 const faker = require('faker');
 const userSeeds = require("./userSeed.json");
-const dreamSeeds = require("./dreamSeed.json");
+const dreamSeeds = require("./dreamseed.json");
 const db = require("../config/connection");
 const { Dream, User } = require("../models");
 

@@ -22,15 +22,15 @@ query dreams($username: String) {
     query thought($id: ID!) {
       thought(_id: $id) {
         _id
-        thoughtText
+        dreamText
         createdAt
         username
-        reactionCount
-        reactions {
+        commentCount
+        comments {
           _id
           createdAt
           username
-          reactionBody
+          commentBody
         }
       }
     }
@@ -47,11 +47,11 @@ query dreams($username: String) {
           _id
           username
         }
-        thoughts {
+        dreams {
           _id
-          thoughtText
+          dreamText
           createdAt
-          reactionCount
+          commentCount
         }
       }
     }
@@ -64,15 +64,15 @@ query dreams($username: String) {
         username
         email
         friendCount
-        thoughts {
+        dreams {
           _id
-          thoughtText
+          dreamText
           createdAt
-          reactionCount
-          reactions {
+          commentCount
+          comments {
             _id
             createdAt
-            reactionBody
+            commentBody
             username
           }
         }

@@ -19,6 +19,7 @@
   "dependencies": {
     "ansi-regex": "^4.1.1",
     "ansi-styles": "^3.2.1",
+    "babel": "^6.23.0",
     "camelcase": "^5.3.1",
     "chalk": "^2.4.2",
     "cliui": "^5.0.0",

@@ -1,11 +1,11 @@
 import React from 'react';
 
 const NoMatch = () => {
-  return (
+return (
     <div>
-      Oops, we couldn't find that dream.
+    Oops, we couldn't find that dream.
     </div>
-  );
+);
 };
 
 export default NoMatch;

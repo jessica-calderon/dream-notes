@@ -23,11 +23,11 @@ const DreamList = ({ dreams, title }) => {
               thought on {dream.createdAt}
             </p>
             <div className="">
-              <Link to={`/thought/${thought._id}`}>
-                <p>{thought.thoughtText}</p>
+              <Link to={`/dream/${dream._id}`}>
+                <p>{dream.dreamText}</p>
                 <p className="mb-0">
-                  Reactions: {thought.reactionCount} || Click to{" "}
-                  {thought.reactionCount ? "see" : "start"} the discussion!
+                  Reactions: {dream.commentCount} || Click to{" "}
+                  {dream.commentCount ? "see" : "start"} dreams now!
                 </p>
               </Link>
             </div>

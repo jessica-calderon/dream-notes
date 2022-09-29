@@ -11,7 +11,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import NoMatch from "./pages/NoMatch";
 import Profile from "./pages/Profile";
-import SingleDream from "/pages/SingleDream";
+import SingleDream from "./pages/SingleDream";
 import Signup from "./pages/Signup";
 //import logo from //change to our logo
 import "./App.css";

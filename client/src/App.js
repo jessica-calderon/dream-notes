@@ -18,7 +18,7 @@ import Profile from "./pages/Profile";
 import SingleDream from "./pages/SingleDream";
 import Signup from "./pages/Signup";
 //import logo from //change to our logo
-import "./App.css";
+//import "./App.css";
 
 const httpLink = createHttpLink({
   uri: `/graphql`,
@@ -33,7 +33,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="">
+        <div className="flex justify-end">
           <Header />
           <div className="container">
             <Routes>

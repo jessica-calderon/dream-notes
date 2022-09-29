@@ -1,82 +1,23 @@
-import { gql } from "@apollo/client";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export const LOGIN_USER = gql`
-  mutation login($email: String!, $password: String!) {
-    login(email: $email, password: $password) {
-      token
-      user {
-        _id
-        username
-      }
-    }
+const FriendList = ({ friendCount, username, friends }) => {
+  if (!friends || !friends.length) {
+    return <p className="bg-dark text-light p-3">{username}, make some friends!</p>;
   }
-`;
 
-export const ADD_USER = gql`
-  mutation addUser($username: String!, $email: String!, $password: String!) {
-    addUser(username: $username, email: $email, password: $password) {
-      token
-      user {
-        _id
-        username
-      }
-    }
-  }
-`;
+  return (
+    <div>
+      <h5>
+        {username}'s {friendCount} {friendCount === 1 ? 'friend' : 'friends'}
+      </h5>
+      {friends.map(friend => (
+        <button className="btn w-100 display-block mb-2" key={friend._id}>
+          <Link to={`/profile/${friend.username}`}>{friend.username}</Link>
+        </button>
+      ))}
+    </div>
+  );
+};
 
-export const ADD_THOUGHT = gql`
-  mutation addDream($dreamText: String!) {
-    addDream(dreamText: $dreamText) {
-      _id
-      dreamText
-      createdAt
-      username
-      commentCount
-      comments {
-        _id
-      }
-    }
-  }
-`;
-
-export const ADD_REACTION = gql`
-  mutation addReaction($thoughtId: ID!, $commentBody: String!) {
-    addReaction(thoughtId: $thoughtId, commentBody: $commentBody) {
-      _id
-      commentCount
-      comments {
-        _id
-        commentBody
-        createdAt
-        username
-      }
-    }
-  }
-`;
-
-export const ADD_FRIEND = gql`
-  mutation addFriend($id: ID!) {
-    addFriend(friendId: $id) {
-      _id
-      username
-      friendCount
-      friends {
-        _id
-        username
-      }
-    }
-  }
-`;
-
-export const REMOVE_FRIEND = gql`
-  mutation removeFriend($id: ID!) {
-    removeFriend(id: $id) {
-      _id
-      username
-      friends {
-        _id
-        username
-      }
-    }
-  }
-`;
+export default FriendList;

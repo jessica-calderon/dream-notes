@@ -62,15 +62,17 @@ const resolvers = {
       if (context.user) {
         const dream = await Dream.create({
           ...args,
-          username: context.user.username,
+          username: context.user.username
         });
+
+        
 
         await User.findByIdAndUpdate(
           { _id: context.user._id },
           { $push: { dreams: dream._id } },
           { new: true }
         );
-        return dream;
+        return { token, dream };
       }
       throw new AuthenticationError("You need to be logged in");
     },

@@ -18,9 +18,9 @@ query dreams($username: String) {
   }
   `;
   
-  export const QUERY_THOUGHT = gql`
-    query thought($id: ID!) {
-      thought(_id: $id) {
+  export const QUERY_DREAM = gql`
+    query dream($id: ID!) {
+      dream(_id: $id) {
         _id
         dreamText
         createdAt

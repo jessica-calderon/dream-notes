@@ -24,9 +24,9 @@ export const ADD_USER = gql`
   }
 `;
 
-export const ADD_THOUGHT = gql`
-  mutation addThought($dreamText: String!) {
-    addThought(dreamText: $dreamText) {
+export const ADD_DREAM = gql`
+  mutation addDream($dreamText: String!) {
+    addDream(dreamText: $dreamText) {
       _id
       dreamText
       createdAt
@@ -39,14 +39,14 @@ export const ADD_THOUGHT = gql`
   }
 `;
 
-export const ADD_REACTION = gql`
-  mutation addReaction($thoughtId: ID!, $reactionBody: String!) {
-    addReaction(thoughtId: $thoughtId, reactionBody: $reactionBody) {
+export const ADD_COMMENT = gql`
+  mutation addComment($dreamId: ID!, $commentBody: String!) {
+    addComment(dreamId: $dreamId, commentBody: $commentBody) {
       _id
       commentCount
       comments {
         _id
-        reactionBody
+        commentBody
         createdAt
         username
       }

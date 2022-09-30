@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+
 import CommentList from "../components/CommentList";
 
 import { useQuery } from "@apollo/client";

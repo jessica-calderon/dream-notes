@@ -20,7 +20,7 @@ const DreamList = ({ dreams, title }) => {
               >
                 {dream.username}
               </Link>{" "}
-              thought on {dream.createdAt}
+              dreamed on {dream.createdAt}
             </p>
             <div className="">
               <Link to={`/dream/${dream._id}`}>

@@ -29,32 +29,28 @@ const CommentForm = ({ dreamId }) => {
   };
 
   return (
-    <div className="">
-      <div className="">
-        <h2 className="">Leave a comment</h2>
-      </div>
+    <div>
       <p
-        className={`m-2 ${characterCount === 280 || error ? "text-error" : ""}`}
+        className={`m-0 ${characterCount === 280 || error ? "text-error" : ""}`}
       >
         Character Count {characterCount}/280
         {error && <span className="">Something went wrong...</span>}
       </p>
-      <div className="">
-        <div className="">
-          <form className="" onSubmit={handleFormSubmit}>
-            <textarea
-              placeholder=""
-              value={commentBody}
-              className=""
-              onChange={handleChange}
-            ></textarea>
+      <form
+        className="flex-row justify-center justify-space-between-md align-stretch"
+        onSubmit={handleFormSubmit}
+      >
+        <textarea
+          placeholder="Leave a comment to this dream"
+          value={commentBody}
+          className="form-input col-12 col-md-9"
+          onChange={handleChange}
+        ></textarea>
 
-            <button className="" type="submit">
-              Submit
-            </button>
-          </form>
-        </div>
-      </div>
+        <button className="btn col-12 col-md-3" type="submit">
+          Submit
+        </button>
+      </form>
       {error && <div>Something went wrong </div>}
     </div>
   );

@@ -29,32 +29,27 @@ const CommentForm = ({ dreamId }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 px-6 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Leave a comment
-        </h2>
+    <div className="">
+      <div className="">
+        <h2 className="">Leave a comment</h2>
       </div>
       <p
         className={`m-2 ${characterCount === 280 || error ? "text-error" : ""}`}
       >
         Character Count {characterCount}/280
-        {error && <span className="m-3">Something went wrong...</span>}
+        {error && <span className="">Something went wrong...</span>}
       </p>
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-6 shadow rounded-lg sm:px-10">
-          <form className="mb-14 space-y-8" onSubmit={handleFormSubmit}>
+      <div className="">
+        <div className="">
+          <form className="" onSubmit={handleFormSubmit}>
             <textarea
-              placeholder="Leave a comment to this dream"
+              placeholder=""
               value={commentBody}
-              className="mt-6 text-center text-3xl font-extrabold text-gray-900"
+              className=""
               onChange={handleChange}
             ></textarea>
 
-            <button
-              className="mt-10 w-full flex justify-center py-4 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              type="submit"
-            >
+            <button className="" type="submit">
               Submit
             </button>
           </form>

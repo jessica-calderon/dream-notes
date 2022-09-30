@@ -62,10 +62,12 @@ const resolvers = {
       if (context.user) {
         const dream = await Dream.create({
           ...args,
-          username: context.user.username
+          username: context.user.username,
         });
 
-        
+        const token = signToken(dream);
+
+        return { token, dream };
 
         await User.findByIdAndUpdate(
           { _id: context.user._id },

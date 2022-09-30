@@ -32,7 +32,7 @@ const resolvers = {
       const params = username ? { username } : {};
       return Dream.find(params).sort({ createdAt: -1 });
     },
-    dreams: async (parent, { _id }) => {
+    dream: async (parent, { _id }) => {
       return Dream.findOne({ _id });
     },
   },
@@ -65,15 +65,13 @@ const resolvers = {
           username: context.user.username,
         });
 
-        const token = signToken(dream);
-
-        return { token, dream };
-
         await User.findByIdAndUpdate(
           { _id: context.user._id },
           { $push: { dreams: dream._id } },
           { new: true }
         );
+        const token = signToken(dream);
+
         return { token, dream };
       }
       throw new AuthenticationError("You need to be logged in");

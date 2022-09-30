@@ -26,7 +26,7 @@ const DreamList = ({ dreams, title }) => {
               <Link to={`/dream/${dream._id}`}>
                 <p>{dream.dreamText}</p>
                 <p className="mb-0">
-                  Reactions: {dream.commentCount} || Click to{" "}
+                  Comments: {dream.commentCount} || Click to{" "}
                   {dream.commentCount ? "see" : "start"} dreams now!
                 </p>
               </Link>

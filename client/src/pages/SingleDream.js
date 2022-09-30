@@ -1,10 +1,9 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React from "react";
+import { useParams } from "react-router-dom";
+import CommentList from "../components/CommentList";
 
-import CommentList from '../components/CommentList';
-
-import { useQuery } from '@apollo/client';
-import { QUERY_DREAM } from '../utils/queries';
+import { useQuery } from "@apollo/client";
+import { QUERY_DREAM } from "../utils/queries";
 
 const SingleDream = (props) => {
   const { id: dreamId } = useParams();
@@ -25,7 +24,7 @@ const SingleDream = (props) => {
         <p className="card-header">
           <span style={{ fontWeight: 700 }} className="text-light">
             {dream.username}
-          </span>{' '}
+          </span>{" "}
           Dream on {dream.createdAt}
         </p>
         <div className="card-body">
@@ -33,9 +32,7 @@ const SingleDream = (props) => {
         </div>
       </div>
 
-      {dream.commentCount > 0 && (
-        <CommentList comments={dream.comments} />
-      )}
+      {dream.commentCount > 0 && <CommentList comments={dream.comments} />}
     </div>
   );
 };

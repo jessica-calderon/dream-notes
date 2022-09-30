@@ -28,7 +28,7 @@ const dreamSchema = new Schema(
   }
 );
 
-commentSchema.virtual("commentCount").get(function () {
+dreamSchema.virtual("commentCount").get(function () {
   return this.comments.length;
 });
 

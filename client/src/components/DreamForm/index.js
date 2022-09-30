@@ -59,11 +59,7 @@ const DreamForm = () => {
   return (
     <div>
       <p
-<<<<<<< HEAD
         className={`m-0 ${characterCount === 280 || error ? "text-error" : ""}`}
-=======
-        className={`m-0 ${characterCount === 1280 || error ? 'text-error' : ''}`}
->>>>>>> 2c028a167083ce2fe80ce461581a57f9744f8378
       >
         Character Count: {characterCount}/1280
         {error && <span className="ml-2">Something went wrong...</span>}

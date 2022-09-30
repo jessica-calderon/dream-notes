@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { useMutation } from '@apollo/client';
-import { ADD_DREAM } from '../../utils/mutations';
-import { QUERY_DREAMS, QUERY_ME } from '../../utils/queries';
+import { useMutation } from "@apollo/client";
+import { ADD_DREAM } from "../../utils/mutations";
+import { QUERY_DREAMS, QUERY_ME } from "../../utils/queries";
 
 const DreamForm = () => {
-  const [dreamText, setText] = useState('');
+  const [dreamText, setText] = useState("");
   const [characterCount, setCharacterCount] = useState(0);
 
   const [addDream, { error }] = useMutation(ADD_DREAM, {
     update(cache, { data: { addDream } }) {
-      
-        // could potentially not exist yet, so wrap in a try/catch
+      // could potentially not exist yet, so wrap in a try/catch
       try {
         // update me array's cache
         const { me } = cache.readQuery({ query: QUERY_ME });
@@ -20,7 +19,7 @@ const DreamForm = () => {
           data: { me: { ...me, dreams: [...me.dreams, addDream] } },
         });
       } catch (e) {
-        console.warn("First dream insertion by user!")
+        console.warn("First dream insertion by user!");
       }
 
       // update dream array's cache
@@ -29,7 +28,7 @@ const DreamForm = () => {
         query: QUERY_DREAMS,
         data: { dreams: [addDream, ...dreams] },
       });
-    }
+    },
   });
 
   // update state based on form input changes
@@ -50,7 +49,7 @@ const DreamForm = () => {
       });
 
       // clear form value
-      setText('');
+      setText("");
       setCharacterCount(0);
     } catch (e) {
       console.error(e);
@@ -60,7 +59,7 @@ const DreamForm = () => {
   return (
     <div>
       <p
-        className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}
+        className={`m-0 ${characterCount === 280 || error ? "text-error" : ""}`}
       >
         Character Count: {characterCount}/280
         {error && <span className="ml-2">Something went wrong...</span>}

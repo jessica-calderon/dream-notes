@@ -33,7 +33,7 @@ const DreamForm = () => {
 
   // update state based on form input changes
   const handleChange = (event) => {
-    if (event.target.value.length <= 280) {
+    if (event.target.value.length <= 1280) {
       setText(event.target.value);
       setCharacterCount(event.target.value.length);
     }
@@ -59,9 +59,13 @@ const DreamForm = () => {
   return (
     <div>
       <p
+<<<<<<< HEAD
         className={`m-0 ${characterCount === 280 || error ? "text-error" : ""}`}
+=======
+        className={`m-0 ${characterCount === 1280 || error ? 'text-error' : ''}`}
+>>>>>>> 2c028a167083ce2fe80ce461581a57f9744f8378
       >
-        Character Count: {characterCount}/280
+        Character Count: {characterCount}/1280
         {error && <span className="ml-2">Something went wrong...</span>}
       </p>
       <form

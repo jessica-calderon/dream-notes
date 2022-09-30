@@ -58,21 +58,21 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+
     addDream: async (parent, args, context) => {
       if (context.user) {
         const dream = await Dream.create({
           ...args,
           username: context.user.username
-        });
-
-        
+          
+        });   
 
         await User.findByIdAndUpdate(
           { _id: context.user._id },
           { $push: { dreams: dream._id } },
           { new: true }
         );
-        return { token, dream };
+       return dream;
       }
       throw new AuthenticationError("You need to be logged in");
     },

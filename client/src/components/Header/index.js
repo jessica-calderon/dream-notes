@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
-
+// TODO style and add logo and links
 const Header = () => {
   const logout = event => {
     event.preventDefault();

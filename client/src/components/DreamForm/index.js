@@ -65,17 +65,17 @@ const DreamForm = () => {
         {error && <span className="ml-2">Something went wrong...</span>}
       </p>
       <form
-        className="Form"
+        className="DreamForm"
         onSubmit={handleFormSubmit}
       >
         <textarea
-          placeholder="Here's a new dream..."
+          placeholder="Share my dream..."
           value={dreamText}
           className="form-input"
           onChange={handleChange}
         ></textarea>
-        <button className="btn col-12 col-md-3" type="submit">
-          Submit
+        <button className="DreamBtn" type="submit">
+          Share
         </button>
       </form>
     </div>

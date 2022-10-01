@@ -1,30 +1,44 @@
 body {
   margin: 10;
-  background-color: aquamarine;
+  background-color: #ceb7e9;
+  
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.main {
+  outline-color: darkblue;
+  outline-width: 5px;
+  outline-style: double;
+  margin: 75px;
+  border-top: 25px solid #6A5A85;
+  background-color: rgb(196, 218, 246);
+  text-decoration: none;
+  padding: 3%;
+  text-align: justify;
+  max-width: fit-content;
+  max-height: 100%; 
+}
 
-  .Form {
-    
-    margin: 60px;
-    display: flex;
-    flex-wrap: flex-wrap;
-    padding: 10px 
-  }
+.DreamForm {
+  color: #301C30;
+}
+
+.form-input {
+  width: 600px;
+  height: 300px;
+  background-color: #ceb7e9;
+}
+.DreamBtn {
+  background-color: #4c2c4c;
+  color: white;
+  border-radius: 20%;
+}
+
 
   .containerDream {
+    display: flex;
     margin: 25px;
     display: inline-block;
     background-color: 9D8BB3;
-  }
-
-  .Form-input {
-  
-    width: 100%;
-  }
-
-  .flex {
-    display: flex;
   }

@@ -5,7 +5,7 @@ import CommentList from "../components/CommentList";
 
 import { useQuery } from "@apollo/client";
 import { QUERY_DREAM } from "../utils/queries";
-
+import CommentForm from "../components/CommentForm";
 const SingleDream = (props) => {
   const { id: dreamId } = useParams();
 
@@ -34,6 +34,8 @@ const SingleDream = (props) => {
       </div>
 
       {dream.commentCount > 0 && <CommentList comments={dream.comments} />}
+
+      {Auth.loggedIn() && <CommentForm dreamId={dream._id} />}
     </div>
   );
 };

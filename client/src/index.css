@@ -1,10 +1,10 @@
 :root {
-  --primary: #497573;
-  --secondary: #99f7f2;
-  --tertiary: #b2c2c1;
-  --quatrinary: #cadbda;
-  --light: #e1f5f4;
-  --dark: #6c7575;
+  --primary: #301C51;
+  --secondary: #6A5A85;
+  --tertiary: #9D8BB3;
+  --quatrinary: #F5D898;
+  --light: #fff;
+  --dark: #000;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
   --spacing-one: calc(1rem * 0.25);
@@ -13,13 +13,57 @@
   --spacing-four: calc(1rem * 1.5);
   --spacing-five: calc(1rem * 3);
 }
-
 body {
   margin: 10;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
+  background-color: var(--tertiary);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+/* text colors */
+.text-dark {
+  color: var(--primary);
+}
+.text-med {
+  color: var(--secondary);
+}
+.text-light {
+  color: var(--tertiary);
+}
+.text-beige {
+  color: var(--quatrinary);
+}
+.text-white {
+  color: var(--light);
+}
+.text-black {
+  color: var(--dark);
+}
+.text-error {
+  color: var(--error);
+}
+/* background colors */
+.bg-dark {
+  background-color: var(--primary);
+}
+.bg-med {
+  color: var(--secondary);
+}
+.bg-light {
+  background-color: var(--tertiary);
+}
+.bg-beige {
+  background-color: var(--quatrinary);
+}
+.bg-white {
+  background-color: var(--light);
+}
+.bg-black {
+  background-color: var(--dark);
+}
+.bg-error {
+  background-color: var(--error);
 }
 
   .Form {

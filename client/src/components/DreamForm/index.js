@@ -10,7 +10,7 @@ const DreamForm = () => {
 
   const [addDream, { error }] = useMutation(ADD_DREAM, {
     update(cache, { data: { addDream } }) {
-      // could potentially not exist yet, so wrap in a try/catch
+      // try/catch statment in case no dream yet
       try {
         // update me array's cache
         const { me } = cache.readQuery({ query: QUERY_ME });
@@ -19,7 +19,7 @@ const DreamForm = () => {
           data: { me: { ...me, dreams: [...me.dreams, addDream] } },
         });
       } catch (e) {
-        console.warn("First dream insertion by user!");
+        console.warn("First dream added by user!");
       }
 
       // update dream array's cache
@@ -36,12 +36,14 @@ const DreamForm = () => {
     if (event.target.value.length <= 1280) {
       setText(event.target.value);
       setCharacterCount(event.target.value.length);
+      
     }
   };
-
+//window.location.reload(false)
   // submit form
   const handleFormSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault(); 
+    window.location.reload(false);
 
     try {
       await addDream({
@@ -65,17 +67,17 @@ const DreamForm = () => {
         {error && <span className="ml-2">Something went wrong...</span>}
       </p>
       <form
-        className="Form"
+        className="DreamForm"
         onSubmit={handleFormSubmit}
       >
         <textarea
-          placeholder="Here's a new dream..."
+          placeholder="Share my dream..."
           value={dreamText}
           className="form-input"
           onChange={handleChange}
         ></textarea>
-        <button className="btn col-12 col-md-3" type="submit">
-          Submit
+        <button className="DreamBtn" type="submit">
+          Share
         </button>
       </form>
     </div>

@@ -48,7 +48,7 @@ body {
   background-color: var(--primary);
 }
 .bg-med {
-  color: var(--secondary);
+  background-color: var(--secondary);
 }
 .bg-light {
   background-color: var(--tertiary);
@@ -64,6 +64,16 @@ body {
 }
 .bg-error {
   background-color: var(--error);
+}
+/* header styles */
+.nav-link a {
+  text-decoration: none;
+  color: var(--quatrinary);
+  font-size: 2rem;
+  font-weight: 450;
+}
+.nav-link a:hover {
+  color: var(--light)
 }
 
   .Form {
@@ -783,30 +793,6 @@ body {
   text-align: right;
 }
 
-.text-primary {
-  color: var(--primary);
-}
-
-.text-secondary {
-  color: var(--secondary);
-}
-
-.text-tertiary {
-  color: var(--tertiary);
-}
-
-.text-quatrinary {
-  color: var(--quatrinary);
-}
-
-.text-light {
-  color: var(--light);
-}
-
-.text-dark {
-  color: var(--dark);
-}
-
 .text-error {
   color: var(--error);
 }
@@ -816,25 +802,7 @@ body {
   font-weight: bold;
 }
 /* BACKGROUND UTILS */
-.bg-primary {
-  background-color: var(--primary);
-}
 
-.bg-secondary {
-  background-color: var(--secondary);
-}
-
-.bg-tertiary {
-  background-color: var(--tertiary);
-}
-
-.bg-light {
-  background-color: var(--light);
-}
-
-.bg-dark {
-  background-color: var(--dark);
-}
 
 /* FLEX CONTENT */
 .flex-row {

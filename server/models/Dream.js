@@ -8,7 +8,7 @@ const dreamSchema = new Schema(
       type: String,
       required: "You forgot to enter your Dream!",
       minlength: 1,
-      maxlength: 280,
+      maxlength: 1280,
     },
     createdAt: {
       type: Date,

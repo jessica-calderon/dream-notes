@@ -57,21 +57,21 @@ const DreamForm = () => {
   };
 
   return (
-    <div>
+    <div className="containerDream">
       <p
-        className={`m-0 ${characterCount === 280 || error ? "text-error" : ""}`}
+        className={`m-0 ${characterCount === 1280 || error ? "text-error" : ""}`}
       >
         Character Count: {characterCount}/1280
         {error && <span className="ml-2">Something went wrong...</span>}
       </p>
       <form
-        className="flex-row justify-center justify-space-between-md align-stretch"
+        className="Form"
         onSubmit={handleFormSubmit}
       >
         <textarea
           placeholder="Here's a new dream..."
           value={dreamText}
-          className="form-input col-12 col-md-9"
+          className="form-input"
           onChange={handleChange}
         ></textarea>
         <button className="btn col-12 col-md-3" type="submit">

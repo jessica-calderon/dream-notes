@@ -1,6 +1,30 @@
 body {
-  margin: 0;
+  margin: 10;
+  background-color: aquamarine;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+  .Form {
+    
+    margin: 60px;
+    display: flex;
+    flex-wrap: flex-wrap;
+    padding: 10px 
+  }
+
+  .containerDream {
+    margin: 25px;
+    display: inline-block;
+    background-color: 9D8BB3;
+  }
+
+  .Form-input {
+  
+    width: 100%;
+  }
+
+  .flex {
+    display: flex;
+  }

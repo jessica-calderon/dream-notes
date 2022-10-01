@@ -15,18 +15,12 @@
 }
 body {
   margin: 10;
-<<<<<<< HEAD
   /* background-color: aquamarine; */
   background-color: var(--tertiary);
-=======
-  background-color: #ceb7e9;
-  
->>>>>>> b992ae56f0b26d8f32d4f641f557651224a3d9f4
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-<<<<<<< HEAD
 /* text colors */
 .text-dark {
   color: var(--primary);
@@ -80,7 +74,7 @@ body {
 }
 .nav-link a:hover {
   color: var(--light)
-=======
+}
 .main {
   outline-color: darkblue;
   outline-width: 5px;
@@ -108,7 +102,6 @@ body {
   background-color: #4c2c4c;
   color: white;
   border-radius: 20%;
->>>>>>> b992ae56f0b26d8f32d4f641f557651224a3d9f4
 }
 
 
@@ -118,7 +111,6 @@ body {
     display: inline-block;
     background-color: 9D8BB3;
   }
-<<<<<<< HEAD
 
   .Form-input {
   
@@ -1286,5 +1278,3 @@ body {
     align-items: center;
   }
 }
-=======
->>>>>>> b992ae56f0b26d8f32d4f641f557651224a3d9f4

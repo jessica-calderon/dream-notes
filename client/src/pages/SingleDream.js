@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 import CommentList from "../components/CommentList";
-
+import Auth from '../utils/auth';
 import { useQuery } from "@apollo/client";
 import { QUERY_DREAM } from "../utils/queries";
 import CommentForm from "../components/CommentForm";
@@ -33,7 +33,7 @@ const SingleDream = (props) => {
         </div>
       </div>
 
-      {dream.commentCount > 0 && <CommentList comments={dream.comments} />}
+      {dream.commentCount > 0 && (<CommentList comments={dream.comments} />)}
 
       {Auth.loggedIn() && <CommentForm dreamId={dream._id} />}
     </div>

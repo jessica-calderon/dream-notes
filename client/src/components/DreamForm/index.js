@@ -59,11 +59,12 @@ const DreamForm = () => {
   };
 
   return (
-    <div className="containerDream">
+    <div className="containerDream cards">
+      <div className="form-card card-3 w-100 p-3 border-radius">
       <p
-        className={`m-0 ${characterCount === 1280 || error ? "text-error" : ""}`}
+        className={`mb-2 ${characterCount === 1280 || error ? "text-error" : ""}`}
       >
-        Character Count: {characterCount}/1280
+        <span className="text-beige text-bold m-2">Character Count: {characterCount}/1280</span><br />
         {error && <span className="ml-2">Something went wrong...</span>}
       </p>
       <form
@@ -73,13 +74,14 @@ const DreamForm = () => {
         <textarea
           placeholder="Share my dream..."
           value={dreamText}
-          className="form-input"
+          className="form-input m-1 form w-100 p-3 border-radius"
           onChange={handleChange}
-        ></textarea>
-        <button className="DreamBtn" type="submit">
-          Share
+        ></textarea><br />
+        <button className="btn mt-2" type="submit">
+          Share Your Dreams 💭
         </button>
       </form>
+    </div>
     </div>
   );
 };

@@ -11,9 +11,9 @@ const DreamList = ({ dreams, title }) => {
   return (
     <div className="container">
       <div className="w-100 mt-3 ml-3">
-            <h3 className="text-large text-beige">
+            <h3 className="text-large text-beige text-shadow">
               <img src={nightMoon} alt="Moon, clouds, and stars" height="75px;" className="mr-2 pt-2" />{title}</h3></div>
-      <div className="row min-80-vw cards mt-3">
+      <div className="row cards justify-space-between mt-3">
       {dreams &&
         dreams.map((dream) => (
           <div key={dream._id} className="card flex card-1">

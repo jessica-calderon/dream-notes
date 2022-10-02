@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <main>
-      <div className="main">
+      <div className="main min-80-vw">
         {loggedIn && (
           <div className="DreamForm">
             <DreamForm />

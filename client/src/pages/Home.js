@@ -29,9 +29,8 @@ const Home = () => {
             <DreamList
               dreams={dreams}
               title="Some Dreams..."
-            />
-          )}
-        </div>
+            />)}
+            </div>    
         {loggedIn && userData ? (
           <div className="col-12 col-lg-3 mb-3">
             <FriendList

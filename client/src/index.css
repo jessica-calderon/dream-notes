@@ -15,7 +15,6 @@
 }
 body {
   margin: 10;
-  /* background-color: aquamarine; */
   background-color: var(--tertiary);
 
   -webkit-font-smoothing: antialiased;
@@ -394,9 +393,19 @@ body {
   left: 0;
   width: 100%;
   display: flex;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
 }
+.footer img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.footer img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
 /* end footer */
 
 /* DISPLAY */

@@ -1,12 +1,13 @@
 import React from 'react';
 import github from '../../assets/img/octocat.svg';
-import cloud from '../../assets/img/6.png';
+// import cloud from '../../assets/img/6.png';
 // TODO: style and update with links
 const Footer = () => {
   return (
     <footer className="p-4 w-100 footer text-center">
       <div className="container">
-        <h3 className="mb-2"><img src={cloud} alt="White cloud and stars" className="p-1 mb-0 mt-1" height="25px"/>
+        <h3 className="mb-2">
+          {/* <img src={cloud} alt="White cloud and stars" className="p-1 mb-0 mt-1" height="25px"/> */}
          Dream Notes </h3>
         <h4>{new Date().getFullYear()} © Group 6 </h4>
         <div className="mt-2">

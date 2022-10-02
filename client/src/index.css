@@ -292,6 +292,59 @@ body {
   
 
 /* end card */
+
+/*Pagination */
+.pagination {
+	position: relative;
+  justify-content: justify;
+	
+	transform: translate(-50%,-50%);
+	margin: 0;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 40px;
+	box-shadow: 0 5px 25px 0 rgba(0,0,0,.5);
+}
+	li {
+		display: inline-block;
+		list-style: none;
+  }
+		li {
+      align-items: center;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			background-color: #fff;
+			text-align: center;
+			text-decoration: none;
+			color: --primary;
+			border-radius: 4px;
+			margin: 5px;
+			box-shadow: inset 0 5px 10px rgba(0,0,0,.1), 0 2px 5px rgba(0,0,0,.5);
+			transition: all .3s ease;
+    }
+
+		hover {
+      color: #fff;
+      background-color: --primary;
+    }
+
+		active {
+				color: #fff;
+				background-color: --primary;
+    }
+		first-child {
+			
+				border-radius: 40px 0 0 40px;
+    }
+
+    
+		last-child {
+			
+				border-radius: 0 40px 40px 0;
+}
+
+
 /* LAYOUT */
 .container {
   width: 85%;

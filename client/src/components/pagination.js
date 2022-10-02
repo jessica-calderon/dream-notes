@@ -13,7 +13,7 @@ const PaginationRange = (start, end) => {
     });
 
     return (
-        <li className={liClasses} onClick={() => onPageChange(page)}>
+        <li className= {liClasses} onClick={() => onPageChange(page)}>
           <span className="page-link">{page}</span>
         </li>
       );

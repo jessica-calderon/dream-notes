@@ -383,6 +383,21 @@ body {
 .container-fluid {
   width: 92%;
 }
+/* footer */
+.footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  color: var(--light);
+  background-color: var(--primary);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+/* end footer */
 
 /* DISPLAY */
 .display-none {

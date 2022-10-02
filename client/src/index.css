@@ -401,9 +401,10 @@ a {
 
 /*Pagination */
 .pagination {
-	position: relative;
-  justify-content: justify;
-	
+	display: inline-block;
+  height: 70px;
+	left: 50%;
+	top: 50%;
 	transform: translate(-50%,-50%);
 	margin: 0;
 	padding: 20px;
@@ -411,11 +412,14 @@ a {
 	border-radius: 40px;
 	box-shadow: 0 5px 25px 0 rgba(0,0,0,.5);
 }
-	li {
-		display: inline-block;
-		list-style: none;
-  }
-		li {
+
+.container-page {
+  position:fixed bottom-center;
+
+}
+
+		.pageli {
+      display: inline-block;
       align-items: center;
 			width: 40px;
 			height: 40px;
@@ -430,12 +434,12 @@ a {
 			transition: all .3s ease;
     }
 
-		hover {
+		hoverPage {
       color: #fff;
       background-color: --primary;
     }
 
-		active {
+		activePage {
 				color: #fff;
 				background-color: --primary;
     }

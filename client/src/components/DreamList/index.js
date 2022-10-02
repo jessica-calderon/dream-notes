@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import pillow from "../../assets/img/1.png";
 import nightMoon from "../../assets/img/8.png";
-import Pagination from "../pagination";
+import Pagination from "../Pagination2";
 
 const DreamList = ({ dreams, title }) => {
-  const [currentPage, setCurrentPage] = useState(1);
+const [currentPage, setCurrentPage] = useState(1);
 
   if (!dreams.length) {
     return <h3>No Dreams Found 😢</h3>;
@@ -13,6 +13,7 @@ const DreamList = ({ dreams, title }) => {
 
   return (
     <div className="container">
+   
       <div className="w-100 mt-3 ml-3">
             <h3 className="text-large text-beige text-shadow">
               <img src={nightMoon} alt="Moon, clouds, and stars" height="75px;" className="mr-2 pt-2" />{title}</h3></div>
@@ -67,14 +68,20 @@ const DreamList = ({ dreams, title }) => {
               </div>
             </div>
             </div>
-          ))}
+          ))          
+          }
       </div>
+     
+    return (
+      <div className="container-page">
       <Pagination
         currentPage={currentPage}
-        total={500}
-        limit={15}
+        total={100}
+        limit={6}
         onPageChange={(page) => setCurrentPage(page)}
       />
+      </div>
+    )  
     </div>
   );
 };

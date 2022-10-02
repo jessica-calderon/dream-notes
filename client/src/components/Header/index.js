@@ -12,36 +12,42 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-med p-4">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
+    <header className="header bg-dark">
+    <nav className="navbar">
         <Link to="/">
-          <img src={brand} className="mt-3 mr-3" alt="Brand Logo" width="150px;"/>
-          {/* <h1 className='6xl'>Dream Notes</h1> */}
-        </Link>
+<img src={brand} className="mt-3 mr-3" alt="Brand Logo" height="75px;"/>
+</Link>
+        <ul className="nav-menu mr-5">
+      {Auth.loggedIn() ? (
+        <>
+            <li className="nav-item">
+                <h2><Link to="/profile">Me</Link></h2>
+            </li>
+            <li className="nav-item">
+              <h2><a href="/" onClick={logout}>
+            Logout
+          </a></h2>
+            </li>
+        </>
+      ) : (
+        <>
+            <li className="nav-item">
+                <h2><Link to="/login">Login</Link></h2>
+            </li>
+            <li className="nav-item">
+                <h2><Link to="/signup">Sign Up</Link></h2>
+            </li>
+        </>
+      )}
+        </ul>
+        <div className="hamburger">
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+        </div>
+    </nav>
+</header>
 
-        <nav className="text-center mx-auto">
-          {Auth.loggedIn() ? (
-            <>
-              <span className="nav-link">
-              <Link to="/profile">Me</Link>
-              < br/>
-              <a href="/" onClick={logout}>
-                Logout
-              </a>
-              </span>
-            </>
-          ) : (
-            <>
-              <span className="nav-link">
-              <Link to="/login">Login</Link>
-              <br/>
-              <Link to="/signup">Signup</Link>
-              </span>
-            </>
-          )}
-        </nav>
-      </div>
-    </header>
   );
 };
 

@@ -12,36 +12,42 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-med p-4">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
+    <header class="header bg-black">
+    <nav class="navbar">
         <Link to="/">
-          <img src={brand} className="mt-3 mr-3" alt="Brand Logo" width="150px;"/>
-          {/* <h1 className='6xl'>Dream Notes</h1> */}
-        </Link>
-
-        <nav className="text-center mx-auto">
-          {Auth.loggedIn() ? (
-            <>
-              <span className="nav-link">
-              <Link to="/profile">Me</Link>
-              < br/>
+<img src={brand} className="mt-3 mr-3" alt="Brand Logo" height="75px;"/>
+</Link>
+        <ul class="nav-menu mr-5">
+      {Auth.loggedIn() ? (
+        <>
+            <li class="nav-item">
+                <Link to="/profile">Me</Link>
+            </li>
+            <li class="nav-item">
               <a href="/" onClick={logout}>
-                Logout
-              </a>
-              </span>
-            </>
-          ) : (
-            <>
-              <span className="nav-link">
-              <Link to="/login">Login</Link>
-              <br/>
-              <Link to="/signup">Signup</Link>
-              </span>
-            </>
-          )}
-        </nav>
-      </div>
-    </header>
+            Logout
+          </a>
+            </li>
+        </>
+      ) : (
+        <>
+            <li class="nav-item">
+                <Link to="/login">Login</Link>
+            </li>
+            <li class="nav-item">
+                <Link to="/signup">Sign Up</Link>
+            </li>
+        </>
+      )}
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+
   );
 };
 

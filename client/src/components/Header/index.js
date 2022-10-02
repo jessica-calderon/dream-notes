@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <header class="header bg-black">
+    <header class="header bg-dark">
     <nav class="navbar">
         <Link to="/">
 <img src={brand} className="mt-3 mr-3" alt="Brand Logo" height="75px;"/>

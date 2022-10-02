@@ -41,12 +41,12 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <main className="flex-row justify-center mb-4 p-4">
       <div className="col-12 cards col-md-6 my-auto">
         <div className="card-3 w-100 form-card">
           <div className="text-center w-100">
           <img src={moon} alt="moon and stars" height="200px;"/>
-          <h2 className="card-header text-big mb-2 text-white p-1">Login</h2>
+          <h2 className="card-header text-big mb-2 text-shadow text-white p-1">Login</h2>
           </div>
           <div className="card-body">
             <form onSubmit={handleFormSubmit}>

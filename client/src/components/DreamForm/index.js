@@ -74,7 +74,7 @@ const DreamForm = () => {
         <textarea
           placeholder="Share my dream..."
           value={dreamText}
-          className="form-input m-1 form w-100 p-3"
+          className="form-input m-1 form w-100 p-3 border-radius"
           onChange={handleChange}
         ></textarea><br />
         <button className="btn mt-2" type="submit">

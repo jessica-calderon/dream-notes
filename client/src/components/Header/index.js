@@ -12,38 +12,38 @@ const Header = () => {
   };
 
   return (
-    <header class="header bg-dark">
-    <nav class="navbar">
+    <header className="header bg-dark">
+    <nav className="navbar">
         <Link to="/">
 <img src={brand} className="mt-3 mr-3" alt="Brand Logo" height="75px;"/>
 </Link>
-        <ul class="nav-menu mr-5">
+        <ul className="nav-menu mr-5">
       {Auth.loggedIn() ? (
         <>
-            <li class="nav-item">
-                <Link to="/profile">Me</Link>
+            <li className="nav-item">
+                <h2><Link to="/profile">Me</Link></h2>
             </li>
-            <li class="nav-item">
-              <a href="/" onClick={logout}>
+            <li className="nav-item">
+              <h2><a href="/" onClick={logout}>
             Logout
-          </a>
+          </a></h2>
             </li>
         </>
       ) : (
         <>
-            <li class="nav-item">
-                <Link to="/login">Login</Link>
+            <li className="nav-item">
+                <h2><Link to="/login">Login</Link></h2>
             </li>
-            <li class="nav-item">
-                <Link to="/signup">Sign Up</Link>
+            <li className="nav-item">
+                <h2><Link to="/signup">Sign Up</Link></h2>
             </li>
         </>
       )}
         </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <div className="hamburger">
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
         </div>
     </nav>
 </header>

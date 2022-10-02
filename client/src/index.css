@@ -184,7 +184,7 @@ a {
   outline-width: 5px;
   outline-style: double;
   margin: auto;
-  border-top: 25px solid #6a5a85;
+  border-top: 25px solid var(--secondary);
   background-color: rgb(196, 218, 246);
   text-decoration: none;
   max-width: fit-content;
@@ -199,6 +199,9 @@ a {
 .form-input {
   width: 600px;
   height: 300px;
+  background-color: #ceb7e9;
+}
+.input-style {
   background-color: #ceb7e9;
 }
 .DreamBtn {
@@ -951,6 +954,9 @@ a {
 }
 .text-shadow {
   text-shadow: 3px 3px var(--dark);
+}
+.text-big {
+  font-size: 4rem;
 }
 .text-outline {
   -webkit-text-stroke-width: 1px;

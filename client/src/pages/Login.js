@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+import moon from '../assets/img/9.png';
 
 import Auth from '../utils/auth';
 //  TODO: style and add graphics 
@@ -41,13 +42,16 @@ const Login = (props) => {
 
   return (
     <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-md-6">
-        <div className="card">
-          <h4 className="card-header">Login</h4>
+      <div className="col-12 cards col-md-6 my-auto">
+        <div className="card-3 w-100 form-card">
+          <div className="text-center w-100">
+          <img src={moon} alt="moon and stars" height="200px;"/>
+          <h2 className="card-header text-big mb-2 text-white p-1">Login</h2>
+          </div>
           <div className="card-body">
             <form onSubmit={handleFormSubmit}>
               <input
-                className="form-input"
+                className="input-style my-2 w-100 p-2 border-radius"
                 placeholder="Your email"
                 name="email"
                 type="email"
@@ -55,8 +59,9 @@ const Login = (props) => {
                 value={formState.email}
                 onChange={handleChange}
               />
+              <br />
               <input
-                className="form-input"
+                className="input-style mb-2 w-100 p-2 border-radius"
                 placeholder="******"
                 name="password"
                 type="password"

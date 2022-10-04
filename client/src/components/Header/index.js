@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import brand from '../../assets/img/brand.png'
 
 import Auth from '../../utils/auth';
-// TODO style and add logo and links
 const Header = () => {
   const logout = event => {
     event.preventDefault();

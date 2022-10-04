@@ -39,7 +39,7 @@ const DreamForm = () => {
       
     }
   };
-//window.location.reload(false)
+
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault(); 

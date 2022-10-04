@@ -177,6 +177,10 @@ a {
   cursor: auto;
 }
 
+p {
+  text-align: left;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .nav-link a:hover {
   color: var(--light);
@@ -385,6 +389,8 @@ a {
 
 .card-4 {
   background: radial-gradient(#60efbc, #58d5c9);
+  border-radius: 16px;
+  
 }
 
 .card-5 {

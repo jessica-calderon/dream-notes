@@ -15,7 +15,7 @@ const Header = () => {
     <header className="header bg-dark">
     <nav className="navbar">
         <Link to="/">
-<img src={brand} className="mt-3 mr-3" alt="Brand Logo" height="75px;"/>
+<img src={brand} className="mt-3 mr-3" alt="Brand Logo" height="50px;"/>
 </Link>
         <ul className="nav-menu mr-5">
       {Auth.loggedIn() ? (

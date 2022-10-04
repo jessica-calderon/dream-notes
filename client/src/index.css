@@ -959,6 +959,9 @@ a {
 .text-shadow {
   text-shadow: 2px 2px var(--dark);
 }
+.text-med {
+  font-size: 2rem;
+}
 .text-big {
   font-size: 4rem;
 }

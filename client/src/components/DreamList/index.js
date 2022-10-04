@@ -2,10 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import pillow from "../../assets/img/1.png";
 import nightMoon from "../../assets/img/8.png"
+import brand from "../../assets/img/brand.png"
 
 const DreamList = ({ dreams, title }) => {
   if (!dreams.length) {
-    return <div className="card card-5 w-100"><h3>No Dreams Found 😢</h3></div>;
+    return <div className="card card-5 w-100 mx-auto display-inline-block text-center text-white text-shadow text-med p-auto"><h3>No Dreams Found 😢</h3>
+    <img src={brand} alt="brand logo" width="75px" className="mx-auto display-inline-block"/><br/>
+    ⬇️ <em>Start dreaming today...</em> ⬇️
+    </div>;
   }
 
   return (

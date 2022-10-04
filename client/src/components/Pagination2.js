@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import DreamList from './DreamList';
 
 const renderData = (data) => {
-  return (
+  
     <ul>
-      {data.map((todo, index) => {
-        return <li key={index}>{todo.title}</li>;
+      {data.map((dreams, index) => {
+        return <li key={index}>{dreams.body}</li>;
       })}
     </ul>
-  );
+  
 };
 
 function Pagination() {
@@ -41,7 +41,7 @@ function Pagination() {
           key={number}
           id={number}
           onClick={handleClick}
-          className={currentPage == number ? "active" : null}
+          className={currentPage === number ? "active" : null}
         >
           {number}
         </li>
@@ -61,6 +61,7 @@ function Pagination() {
     setcurrentPage(currentPage + 1);
 
     if (currentPage + 1 > maxPageNumberLimit) {
+      setpageNumberLimit(pageNumberLimit);
       setmaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit);
       setminPageNumberLimit(minPageNumberLimit + pageNumberLimit);
     }
@@ -114,8 +115,11 @@ function Pagination() {
             </button>
          </li>
       </ul>
-      <button>
-        Load More
+      <button
+        onClick={handleLoadMore}
+        disabled={currentPage === pages[pages.length + 1] ? true : false}
+        >
+          Load More
       </button>
       </>
     );

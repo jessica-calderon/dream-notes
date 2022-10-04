@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import DreamList from '../components/DreamList';
 import DreamForm from '../components/DreamForm';
 import FriendList from '../components/FriendList';
@@ -10,7 +10,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_DREAMS, QUERY_ME_BASIC } from '../utils/queries';
 
 const Home = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  
   const { loading, data } = useQuery(QUERY_DREAMS);
   const { data: userData } = useQuery(QUERY_ME_BASIC);
   const dreams = data?.dreams || [];
@@ -48,14 +48,11 @@ const Home = () => {
           </div>
         ) : null}
       </div>
-      <div className="container">
+      
       <Pagination
-        currentPage={currentPage}
-        total={50}
-        limit={10}
-        onPageChange={(page) => setCurrentPage(page)}
+       
       />
-    </div>
+    
      
     </main>
   );

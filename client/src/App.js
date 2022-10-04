@@ -7,7 +7,7 @@ import {
   InMemoryCache,
   createHttpLink,
 } from "@apollo/client";
-import { setContext } from '@apollo/client/link/context';
+import { setContext } from "@apollo/client/link/context";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -26,11 +26,11 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem("id_token");
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
 });
@@ -51,16 +51,15 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
-              <Route path="/profile"
-                     element={<Profile />} />
+              <Route path="/profile" element={<Profile />} />
               <Route path="/dream/:id" element={<SingleDream />} />
               <Route path="/dream" element={<SingleDream />} />
 
               <Route path="*" element={<NoMatch />} />
             </Routes>
-            </div>          </div>
-          <Footer />
-
+          </div>
+        </div>
+        <Footer />
       </Router>
     </ApolloProvider>
   );

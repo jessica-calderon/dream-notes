@@ -29,7 +29,7 @@ const CommentForm = ({ dreamId }) => {
   };
 
   return (
-    <div className="">
+    <div className="form-card bg-beige w-100 p-3 border-radius">
       <p
         className={`heading card__text  ${
           characterCount === 1280 || error ? "text-error" : ""
@@ -42,7 +42,7 @@ const CommentForm = ({ dreamId }) => {
         <textarea
           placeholder="Leave a comment to this dream"
           value={commentBody}
-          className="form-card  w-75 card-2 p-5"
+          className="form-card  w-75 card-4 p-5"
           onChange={handleChange}
         ></textarea>
 

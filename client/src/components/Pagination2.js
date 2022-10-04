@@ -93,9 +93,9 @@ function Pagination() {
   return (
     <>
       {renderData(currentItems)}
-      <ul className="pageNumbers">
-        <li>
-          <button
+      <ul>
+        <li className="pageNumbers">
+          <button className="btn"
             onClick={handlePrevbtn}
             disabled={currentPage === pages[0] ? true : false}
           >
@@ -106,21 +106,23 @@ function Pagination() {
         {renderPageNumbers}
         {pageIncrementBtn}
 
-        <li>
-          <button
+        <li className="pageNumbers">
+          <button className="btn"
             onClick={handleNextbtn}
             disabled={currentPage === pages[pages.length - 1] ? true : false}
           >
             Next
             </button>
          </li>
-      </ul>
-      <button
+      <li className="pageNumbers">
+      <button className="btn page"
         onClick={handleLoadMore}
         disabled={currentPage === pages[pages.length + 1] ? true : false}
         >
-          Load More
+          More
       </button>
+      </li>
+      </ul>
       </>
     );
   }

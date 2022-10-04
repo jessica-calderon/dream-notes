@@ -176,6 +176,8 @@ a {
 .btn:disabled {
   cursor: auto;
 }
+
+
 .nav-link a:hover {
   color: var(--light);
 }
@@ -408,30 +410,27 @@ a {
 	transform: translate(-50%,-50%);
 	margin: 0;
 	padding: 20px;
-	background-color: #fff;
+
 	border-radius: 40px;
 	box-shadow: 0 5px 25px 0 rgba(0,0,0,.5);
 }
 
 .container-page {
-  position:fixed bottom-center;
+  display: inline-block;
+  align-items: left;
 
 }
 
-		.pageli {
+		.pageNumbers {
       display: inline-block;
       align-items: center;
-			width: 40px;
+			width: 80px;
 			height: 40px;
 			line-height: 40px;
-			background-color: #fff;
 			text-align: center;
 			text-decoration: none;
-			color: --primary;
-			border-radius: 4px;
 			margin: 5px;
-			box-shadow: inset 0 5px 10px rgba(0,0,0,.1), 0 2px 5px rgba(0,0,0,.5);
-			transition: all .3s ease;
+      transition: all .3s ease;
     }
 
 		hoverPage {
@@ -472,7 +471,7 @@ a {
   margin-top: auto;
   padding: 1rem;
   color: var(--light);
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   width: 100%;

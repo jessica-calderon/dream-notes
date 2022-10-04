@@ -2,7 +2,7 @@ import React from 'react';
 import DreamList from '../components/DreamList';
 import DreamForm from '../components/DreamForm';
 import FriendList from '../components/FriendList';
-import Pagination from '../components/Pagination2';
+//import Pagination from '../components/Pagination2';
 
 
 import Auth from '../utils/auth';
@@ -49,9 +49,9 @@ const Home = () => {
         ) : null}
       </div>
       
-      <Pagination
+      {/* <Pagination
        
-      />
+      /> */}
     
      
     </main>

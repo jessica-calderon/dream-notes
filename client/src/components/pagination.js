@@ -1,7 +1,7 @@
-import "./pagination.css";
+import React from "react";
 import classNames from "classnames";
 
-const range = (start, end) => {
+const PaginationRange = (start, end) => {
   return [...Array(end).keys()].map((el) => el + start);
 };
 
@@ -19,7 +19,7 @@ const PaginationItem = ({ page, currentPage, onPageChange }) => {
 
 const Pagination = ({ currentPage, total, limit, onPageChange }) => {
   const pagesCount = Math.ceil(total / limit);
-  const pages = range(1, pagesCount);
+  const pages = PaginationRange(1, pagesCount);
   return (
     <ul className="pagination">
       {pages.map((page) => (

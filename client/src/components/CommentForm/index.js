@@ -29,25 +29,24 @@ const CommentForm = ({ dreamId }) => {
   };
 
   return (
-    <div>
+    <div className="">
       <p
-        className={`m-0 ${characterCount === 1280 || error ? "text-error" : ""}`}
+        className={`heading card__text  ${
+          characterCount === 1280 || error ? "text-error" : ""
+        }`}
       >
         Character Count {characterCount}/1280
         {error && <span className="">Something went wrong...</span>}
       </p>
-      <form
-        className="flex-row justify-center justify-space-between-md align-stretch"
-        onSubmit={handleFormSubmit}
-      >
+      <form className="cards  m-2 " onSubmit={handleFormSubmit}>
         <textarea
           placeholder="Leave a comment to this dream"
           value={commentBody}
-          className="form-input col-12 col-md-9"
+          className="form-card  w-75 card-2 p-5"
           onChange={handleChange}
         ></textarea>
 
-        <button className="btn col-12 col-md-3" type="submit">
+        <button className="btn b-block w-50" type="submit">
           Submit
         </button>
       </form>

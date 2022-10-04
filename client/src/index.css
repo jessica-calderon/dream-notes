@@ -176,6 +176,8 @@ a {
 .btn:disabled {
   cursor: auto;
 }
+
+
 .nav-link a:hover {
   color: var(--light);
 }
@@ -265,14 +267,15 @@ a {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
+/* TODO: add media queries for card list */
 
 .card {
   margin: 20px;
   padding: 20px;
-  width: 450px;
-  min-height: 150px;
+  width: 350px;
+  min-height: 100px;
   display: grid;
   grid-template-rows: 20px 20px 1fr 50px;
   border-radius: 10px;
@@ -287,7 +290,10 @@ a {
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
 }
-
+.profile-card {
+  min-height: 17rem;
+  width: 35%;
+}
 .card:hover {
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
   transform: scale(1.01);
@@ -398,6 +404,60 @@ a {
 }
 
 /* end card */
+
+/*Pagination */
+.pagination {
+	display: inline-block;
+  height: 70px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	margin: 0;
+	padding: 20px;
+
+	border-radius: 40px;
+	box-shadow: 0 5px 25px 0 rgba(0,0,0,.5);
+}
+
+.container-page {
+  display: inline-block;
+  align-items: left;
+
+}
+
+		.pageNumbers {
+      display: inline-block;
+      align-items: center;
+			width: 80px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			text-decoration: none;
+			margin: 5px;
+      transition: all .3s ease;
+    }
+
+		hoverPage {
+      color: #fff;
+      background-color: --primary;
+    }
+
+		activePage {
+				color: #fff;
+				background-color: --primary;
+    }
+		first-child {
+			
+				border-radius: 40px 0 0 40px;
+    }
+
+    
+		last-child {
+			
+				border-radius: 0 40px 40px 0;
+}
+
+
 /* LAYOUT */
 .container {
   width: 85%;
@@ -415,7 +475,7 @@ a {
   margin-top: auto;
   padding: 1rem;
   color: var(--light);
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -953,7 +1013,10 @@ a {
   color: var(--error);
 }
 .text-shadow {
-  text-shadow: 3px 3px var(--dark);
+  text-shadow: 2px 2px var(--dark);
+}
+.text-med {
+  font-size: 2rem;
 }
 .text-big {
   font-size: 4rem;

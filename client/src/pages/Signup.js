@@ -4,7 +4,6 @@ import { ADD_USER } from '../utils/mutations';
 import moonClouds from '../assets/img/10.png';
 
 import Auth from '../utils/auth';
-//  TODO: style and add graphics 
 const Signup = () => {
   const [formState, setFormState] = useState({
     username: '',

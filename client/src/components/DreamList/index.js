@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import pillow from "../../assets/img/1.png";
 import nightMoon from "../../assets/img/8.png"
 import brand from "../../assets/img/brand.png"
+import Pagination from "../Pagination"
 
 const DreamList = ({ dreams, title }) => {
 

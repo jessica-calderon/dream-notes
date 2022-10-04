@@ -26,7 +26,11 @@ const Profile = (props) => {
     return <Navigate to="/profile:username" />;
   }
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="cards">
+        <div className="card card-1">Loading...</div>
+      </div>
+    );
   }
   if (!user?.username) {
     return (
@@ -72,13 +76,13 @@ const Profile = (props) => {
           />
         </div>
       </div>
-        <div className="col-12 col-lg-3 mb-3">
-          <FriendList
-            username={user.username}
-            friendCount={user.friendCount}
-            friends={user.friends}
-          />
-        </div>
+      <div className="col-12 col-lg-3 mb-3">
+        <FriendList
+          username={user.username}
+          friendCount={user.friendCount}
+          friends={user.friends}
+        />
+      </div>
 
       <div className="mb-3">{!userParam && <DreamForm />}</div>
     </div>

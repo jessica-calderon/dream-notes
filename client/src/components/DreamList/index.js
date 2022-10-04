@@ -5,7 +5,7 @@ import nightMoon from "../../assets/img/8.png"
 
 const DreamList = ({ dreams, title }) => {
   if (!dreams.length) {
-    return <h3>No Dreams Found 😢</h3>;
+    return <div className="card card-5 w-100"><h3>No Dreams Found 😢</h3></div>;
   }
 
   return (

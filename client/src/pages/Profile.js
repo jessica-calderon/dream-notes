@@ -11,6 +11,7 @@ import { QUERY_USER, QUERY_ME } from "../utils/queries";
 import { ADD_FRIEND } from "../utils/mutations";
 
 import Auth from "../utils/auth";
+import sleepZs from "../assets/img/11.png";
 
 const Profile = (props) => {
   const { username: userParam } = useParams();
@@ -29,10 +30,12 @@ const Profile = (props) => {
   }
   if (!user?.username) {
     return (
-      <h4>
-        You need to be logged in to see this. Use the navigation links above to
-        sign up or log in!
-      </h4>
+      <div className="card card-5 w-100">
+        <h4>
+          You need to be logged in to see this. Use the navigation links above
+          to sign up or log in!
+        </h4>
+      </div>
     );
   }
 
@@ -46,10 +49,14 @@ const Profile = (props) => {
     }
   };
   return (
-    <div>
-      <div className="flex-row mb-3">
-        <h2 className="bg-dark text-secondary p-3 display-inline-block">
+    <div classNames="cards align-center">
+      <div className="text-center w-100  mx-auto profile-card card card-1">
+        <h2 className="text-white text-shadow text-center display-inline-block">
+          <img src={sleepZs} width="200px" alt="sleeping zs" />
+          <br />
+          <br />
           Viewing {userParam ? `${user.username}'s` : "your"} profile
+          <br />
         </h2>
         {userParam && (
           <button className="btn ml-auto" onClick={handleClick}>
@@ -58,13 +65,13 @@ const Profile = (props) => {
         )}
       </div>
       <div className="flex-row justify-space-between mb-3">
-        <div className="col-12 mb-3 col-lg-8">
+        <div className="col-12 mb-3">
           <DreamList
             dreams={user.dreams}
             title={`${user.username}'s dreams...`}
           />
         </div>
-
+      </div>
         <div className="col-12 col-lg-3 mb-3">
           <FriendList
             username={user.username}
@@ -72,7 +79,7 @@ const Profile = (props) => {
             friends={user.friends}
           />
         </div>
-      </div>
+
       <div className="mb-3">{!userParam && <DreamForm />}</div>
     </div>
   );

@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import DreamList from './DreamList';
+import React, { useEffect, useState } from "react";
+import DreamList from "./DreamList";
 
 const renderData = (data) => {
-  
-    <ul>
-      {data.map((dreams, index) => {
-        return <li key={index}>{dreams.body}</li>;
-      })}
-    </ul>
-  
+  <ul>
+    {data.map((dreams, index) => {
+      return <li key={index}>{dreams.body}</li>;
+    })}
+  </ul>;
 };
 
 function Pagination() {
@@ -45,7 +43,7 @@ function Pagination() {
         >
           {number}
         </li>
-      )
+      );
     } else {
       return null;
     }
@@ -80,12 +78,12 @@ function Pagination() {
   if (pages.length > maxPageNumberLimit) {
     pageIncrementBtn = <li onClick={handleNextbtn}> &hellip; </li>;
   }
-  
+
   let pageDecrementBtn = null;
-  if (minPageNumberLimit >+ 1) {
+  if (minPageNumberLimit > +1) {
     pageDecrementBtn = <li onClick={handlePrevbtn}> &hellip; </li>;
   }
-  
+
   const handleLoadMore = () => {
     setitemsPerPage(itemsPerPage + 5);
   };
@@ -95,7 +93,8 @@ function Pagination() {
       {renderData(currentItems)}
       <ul>
         <li className="pageNumbers">
-          <button className="btn"
+          <button
+            className="btn"
             onClick={handlePrevbtn}
             disabled={currentPage === pages[0] ? true : false}
           >
@@ -107,24 +106,26 @@ function Pagination() {
         {pageIncrementBtn}
 
         <li className="pageNumbers">
-          <button className="btn"
+          <button
+            className="btn"
             onClick={handleNextbtn}
             disabled={currentPage === pages[pages.length - 1] ? true : false}
           >
             Next
-            </button>
-         </li>
-      <li className="pageNumbers">
-      <button className="btn page"
-        onClick={handleLoadMore}
-        disabled={currentPage === pages[pages.length + 1] ? true : false}
-        >
-          More
-      </button>
-      </li>
+          </button>
+        </li>
+        <li className="pageNumbers">
+          <button
+            className="btn page"
+            onClick={handleLoadMore}
+            disabled={currentPage === pages[pages.length + 1] ? true : false}
+          >
+            More
+          </button>
+        </li>
       </ul>
-      </>
-    );
-  }
+    </>
+  );
+}
 
-  export default Pagination;
+export default Pagination;

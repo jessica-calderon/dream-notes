@@ -58,9 +58,9 @@ function App() {
 
               <Route path="*" element={<NoMatch />} />
             </Routes>
-          </div>
+            </div>          </div>
           <Footer />
-        </div>
+
       </Router>
     </ApolloProvider>
   );

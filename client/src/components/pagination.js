@@ -1,29 +1,28 @@
-import React from 'react';
-import classNames from 'classnames';
-
+import React from "react";
+import classNames from "classnames";
 
 const PaginationRange = (start, end) => {
-    return [...Array(end).keys()].map((el) => el + start);
-  };
+  return [...Array(end).keys()].map((el) => el + start);
+};
 
-  const PaginationItem = ({ page, currentPage, onPageChange }) => {
-    const liClasses = classNames({
-      "page-item": true,
-      active: page === currentPage,
-    });
+const PaginationItem = ({ page, currentPage, onPageChange }) => {
+  const liClasses = classNames({
+    "page-item": true,
+    active: page === currentPage,
+  });
 
-    return (
-        <li className={liClasses} onClick={() => onPageChange(page)}>
-          <span className="page-link">{page}</span>
-        </li>
-      );
-    };
+  return (
+    <li className={liClasses} onClick={() => onPageChange(page)}>
+      <span className="page-link">{page}</span>
+    </li>
+  );
+};
 
 const Pagination = ({ currentPage, total, limit, onPageChange }) => {
-    const pagesCount = Math.ceil(total / limit);
-    const pages = PaginationRange(1, pagesCount);
-    return (
-    <ul className='pagination'>
+  const pagesCount = Math.ceil(total / limit);
+  const pages = PaginationRange(1, pagesCount);
+  return (
+    <ul className="pagination">
       {pages.map((page) => (
         <PaginationItem
           page={page}
@@ -31,17 +30,9 @@ const Pagination = ({ currentPage, total, limit, onPageChange }) => {
           currentPage={page}
           onPageChange={onPageChange}
         />
-      ))}  
+      ))}
     </ul>
-    );
-
-  
-  };
-
-
-
-
-
-
+  );
+};
 
 export default Pagination;

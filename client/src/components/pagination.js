@@ -10,7 +10,6 @@ const PaginationItem = ({ page, currentPage, onPageChange }) => {
     "page-item": true,
     active: page === currentPage,
   });
-
   return (
     <li className={liClasses} onClick={() => onPageChange(page)}>
       <span className="page-link">{page}</span>
@@ -27,7 +26,7 @@ const Pagination = ({ currentPage, total, limit, onPageChange }) => {
         <PaginationItem
           page={page}
           key={page}
-          currentPage={page}
+          currentPage={currentPage}
           onPageChange={onPageChange}
         />
       ))}

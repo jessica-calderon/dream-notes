@@ -2,7 +2,7 @@ import React from "react";
 import DreamList from "../components/DreamList";
 import DreamForm from "../components/DreamForm";
 import FriendList from "../components/FriendList";
-//import Pagination from '../components/Pagination2';
+//import Pagination from '../components/Pagination';
 
 import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
@@ -44,10 +44,7 @@ const Home = () => {
         ) : null}
       </div>
 
-      {/* <Pagination
-       
-      /> */}
-    </main>
+        </main>
   );
 };
 

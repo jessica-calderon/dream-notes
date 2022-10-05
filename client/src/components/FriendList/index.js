@@ -1,18 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import darkcloud from "../../assets/img/2.png";
+import React from "react";
+import { Link } from "react-router-dom";
+import friendsPic from "../../assets/img/12.png";
 
 const FriendList = ({ friendCount, username, friends }) => {
   if (!friends || !friends.length) {
-    return <div className="container w-100"><div className="card-4 m-4 p-2">  <img src={darkcloud} alt="dark cloud mobile" width="50px" className="mr-2"/> <p className="text-dark p-3">{username}, add a friend to share dreams</p></div></div>;
+    return (
+        <div className="card w-100 display-inline-block text-center card-4 mx-auto p-2">
+          <p className="text-dark text-med my-auto ">
+            Hey <b>{username}</b>, make some friends!{" "}
+          </p>
+          <img
+            src={friendsPic}
+            alt="friends hugging"
+            className="p-1 display-inline-block"
+            width="50px"
+          />
+        </div>
+    );
   }
 
   return (
     <div>
       <h5>
-        {username}'s {friendCount} {friendCount === 1 ? 'friend' : 'friends'}
+        {username}'s {friendCount} {friendCount === 1 ? "friend" : "friends"}
       </h5>
-      {friends.map(friend => (
+      {friends.map((friend) => (
         <button className="btn w-100 display-block mb-2" key={friend._id}>
           <Link to={`/profile/${friend.username}`}>{friend.username}</Link>
         </button>

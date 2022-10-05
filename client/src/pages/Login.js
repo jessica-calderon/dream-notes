@@ -4,7 +4,6 @@ import { LOGIN_USER } from '../utils/mutations';
 import moon from '../assets/img/9.png';
 
 import Auth from '../utils/auth';
-//  TODO: style and add graphics 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN_USER);

@@ -62,7 +62,7 @@ Apache-2.0
 
 ## Live Preview
 
-[heroku]()
+[heroku](https://dream-notes-app.herokuapp.com/)
 
 ## Questions
 
@@ -75,3 +75,9 @@ Email: ayefanova1@gmail.com
 
 GitHub: Jessica Calderon
 Email: calderonjessica13@yahoo.com
+
+GitHub:Wumbo-dot
+Email: jtgutierrez.macpark@gmail.com
+
+GitHub: Christys122
+Email:mcsalazar122@gmail.com

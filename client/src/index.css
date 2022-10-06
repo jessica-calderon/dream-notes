@@ -107,7 +107,7 @@ a {
 }
 
 .nav-item {
-  margin-left: 5rem;
+  margin-left: 2rem;
 }
 .nav-item a {
   color: var(--quatrinary);
@@ -475,7 +475,7 @@ a {
   margin-top: auto;
   padding: 1rem;
   color: var(--light);
-  position: relative;
+  position:static;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -483,12 +483,12 @@ a {
   justify-content: center;
   align-items: center;
 }
-.footer img {
+.footer, .header img {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
 
-.footer img:hover {
+.footer, .header img:hover {
   filter: none;
   -webkit-filter: grayscale(0);
 }

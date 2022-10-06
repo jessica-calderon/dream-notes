@@ -53,7 +53,7 @@ const Profile = (props) => {
     }
   };
   return (
-    <div classNames="cards align-center">
+    <div className="cards align-center">
       <div className="text-center w-100  mx-auto profile-card card card-1">
         <h2 className="text-white text-shadow text-center display-inline-block">
           <img src={sleepZs} width="200px" alt="sleeping zs" />

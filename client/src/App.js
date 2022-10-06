@@ -44,7 +44,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex">
+        <div className="flex min-100-vh">
           <Header />
           <div className="container">
             <Routes>

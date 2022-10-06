@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
-import moon from '../assets/img/9.png';
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from "../utils/mutations";
+import moon from "../assets/img/9.png";
 
-import Auth from '../utils/auth';
+import Auth from "../utils/auth";
 const Login = (props) => {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
@@ -34,8 +34,8 @@ const Login = (props) => {
 
     // clear form values
     setFormState({
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     });
   };
 
@@ -44,8 +44,10 @@ const Login = (props) => {
       <div className="col-12 cards col-md-6 my-auto">
         <div className="card-3 w-100 form-card mb-4 p-4">
           <div className="text-center w-100">
-          <img src={moon} alt="moon and stars" height="200px;"/>
-          <h2 className="card-header text-big mb-2 text-shadow text-white p-1">Login</h2>
+            <img src={moon} alt="moon and stars" height="200px;" />
+            <h2 className="card-header text-big mb-2 text-shadow text-white p-1">
+              Login
+            </h2>
           </div>
           <div className="card-body">
             <form onSubmit={handleFormSubmit}>

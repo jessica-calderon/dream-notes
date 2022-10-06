@@ -273,7 +273,6 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-/* TODO: add media queries for card list */
 
 .card {
   margin: 20px;

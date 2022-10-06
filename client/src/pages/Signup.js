@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../utils/mutations';
-import moonClouds from '../assets/img/10.png';
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../utils/mutations";
+import moonClouds from "../assets/img/10.png";
 
-import Auth from '../utils/auth';
+import Auth from "../utils/auth";
 const Signup = () => {
   const [formState, setFormState] = useState({
-    username: '',
-    email: '',
-    password: '',
+    username: "",
+    email: "",
+    password: "",
   });
   const [addUser, { error }] = useMutation(ADD_USER);
 
@@ -41,9 +41,11 @@ const Signup = () => {
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-md-6 my-auto">
         <div className="card-4 w-100 form-card mb-4 p-4">
-        <div className="text-center w-100">
-        <img src={moonClouds} alt="moon and clouds" height="200px;"/>
-          <h2 className="card-header text-big mb-2 text-shadow text-white p-1">Sign Up</h2>
+          <div className="text-center w-100">
+            <img src={moonClouds} alt="moon and clouds" height="200px;" />
+            <h2 className="card-header text-big mb-2 text-shadow text-white p-1">
+              Sign Up
+            </h2>
           </div>
           <div className="card-body">
             <form onSubmit={handleFormSubmit}>

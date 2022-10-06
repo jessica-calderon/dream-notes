@@ -18,7 +18,6 @@ import NoMatch from "./pages/NoMatch";
 import Profile from "./pages/Profile";
 import SingleDream from "./pages/SingleDream";
 import Signup from "./pages/Signup";
-//import logo from //change to our logo
 import "./index.css";
 
 const httpLink = createHttpLink({
@@ -59,7 +58,7 @@ function App() {
             </Routes>
           </div>
         </div>
-        <Footer className="mt-5 mb-0"/>
+        <Footer className="mt-5 mb-0" />
       </Router>
     </ApolloProvider>
   );

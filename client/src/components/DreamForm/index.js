@@ -36,13 +36,12 @@ const DreamForm = () => {
     if (event.target.value.length <= 1280) {
       setText(event.target.value);
       setCharacterCount(event.target.value.length);
-      
     }
   };
 
   // submit form
   const handleFormSubmit = async (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
     window.location.reload(false);
 
     try {
@@ -59,23 +58,26 @@ const DreamForm = () => {
   };
 
   return (
-      <div className="form-card card-3 mx-auto w-100 p-4 border-radius">
+    <div className="form-card card-3 mx-auto w-100 p-4 border-radius">
       <p
-        className={`text-shadow mb-2 ${characterCount === 1280 || error ? "text-error" : ""}`}
+        className={`text-shadow mb-2 ${
+          characterCount === 1280 || error ? "text-error" : ""
+        }`}
       >
-        <span className="text-beige text-bold m-2">Character Count: {characterCount}/1280</span><br />
+        <span className="text-beige text-bold m-2">
+          Character Count: {characterCount}/1280
+        </span>
+        <br />
         {error && <span className="ml-2">Something went wrong...</span>}
       </p>
-      <form
-        className="DreamForm"
-        onSubmit={handleFormSubmit}
-      >
+      <form className="DreamForm" onSubmit={handleFormSubmit}>
         <textarea
           placeholder="Share my dream..."
           value={dreamText}
           className="form-input m-1 form w-100 p-3 border-radius"
           onChange={handleChange}
-        ></textarea><br />
+        ></textarea>
+        <br />
         <button className="btn mt-2" type="submit">
           <span>Share Your Dreams 💭</span>
         </button>

@@ -5,17 +5,17 @@ import friendsPic from "../../assets/img/12.png";
 const FriendList = ({ friendCount, username, friends }) => {
   if (!friends || !friends.length) {
     return (
-        <div className="card w-100 display-inline-block text-center card-4 mx-auto p-4">
-          <p className="text-dark text-med my-auto ">
-            Hey <b>{username}</b>, make some friends!{" "}
-          </p>
-          <img
-            src={friendsPic}
-            alt="friends hugging"
-            className="p-1 display-inline-block"
-            width="50px"
-          />
-        </div>
+      <div className="card w-100 display-inline-block text-center card-4 mx-auto p-4">
+        <p className="text-dark text-med my-auto ">
+          Hey <b>{username}</b>, make some friends!{" "}
+        </p>
+        <img
+          src={friendsPic}
+          alt="friends hugging"
+          className="p-1 display-inline-block"
+          width="50px"
+        />
+      </div>
     );
   }
 

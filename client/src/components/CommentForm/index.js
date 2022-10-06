@@ -29,7 +29,7 @@ const CommentForm = ({ dreamId }) => {
   };
 
   return (
-    <div className="">
+    <div className="form-card bg-beige w-100 p-3 border-radius">
       <p
         className={`heading card__text  ${
           characterCount === 1280 || error ? "text-error" : ""
@@ -40,14 +40,14 @@ const CommentForm = ({ dreamId }) => {
       </p>
       <form className="cards  m-2 " onSubmit={handleFormSubmit}>
         <textarea
-          placeholder="Leave a comment to this dream"
+          placeholder="Comment on this dream"
           value={commentBody}
-          className="form-card  w-75 card-2 p-5"
+          className="form-card  w-100 card-4 p-3"
           onChange={handleChange}
         ></textarea>
 
-        <button className="btn b-block w-50" type="submit">
-          Submit
+        <button className="btn b-block w-100 mx-3" type="submit">
+          Comment 💭
         </button>
       </form>
       {error && <div>Something went wrong </div>}

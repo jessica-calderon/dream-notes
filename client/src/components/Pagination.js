@@ -8,7 +8,6 @@ const renderData = (data) => {
     })}
   </ul>;
 };
-// fix file name 
 function Pagination() {
   const [data, setData] = useState([]);
 

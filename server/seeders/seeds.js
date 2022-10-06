@@ -3,7 +3,7 @@ const faker = require("faker");
 const db = require("../config/connection");
 const { Dream, User } = require("../models");
 const userSeeds = require("./userSeed.json");
-const dreamSeeds = require("./dreamseed.json");
+const dreamSeeds = require("./dreamSeed.json");
 db.once("open", async () => {
   await Dream.deleteMany({});
   await User.deleteMany({});
@@ -12,7 +12,7 @@ db.once("open", async () => {
   for (let i = 0; i < dreamSeeds.length; i += 1) {
     const username = faker.internet.userName();
     const email = faker.internet.email(username);
-    const password = faker.internet.passwork();
+    const password = faker.internet.password();
     userData.push({ username, email, password });
   }
 

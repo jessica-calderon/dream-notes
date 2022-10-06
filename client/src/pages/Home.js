@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <main>
       <div className="main p-5 min-80-vw">
-        <div className="text-large text-shadow text-beige ml-1">
+        <div className="text-large card w-100 display-inline-block card-3 p-3 mb-0 border-radius text-shadow text-beige ml-1">
           Dream Notes{" "}
           <img src={cloudBubble} alt="cloud thinking bubble" width="75rem;" />
         </div>

@@ -7,6 +7,8 @@ import { useQuery } from "@apollo/client";
 import { QUERY_DREAM } from "../utils/queries";
 import CommentForm from "../components/CommentForm";
 import moonStars from "../assets/img/9.png";
+import dateTime from "../assets/img/dateTime.png";
+
 const SingleDream = (props) => {
   const { id: dreamId } = useParams();
 
@@ -26,7 +28,7 @@ const SingleDream = (props) => {
 
   return (
     <div>
-      <div className="card card-4 w-100 p-3 m-3">
+      <div className="card card-4 w-100 p-3 ">
         <p className="card__text">
           <img
             src={moonStars}
@@ -37,9 +39,10 @@ const SingleDream = (props) => {
           <span style={{ fontWeight: 700 }} className="text-light mb-1">
             {dream.username}
           </span>{" "}
-          Dream on {dream.createdAt}
+          dreamed on {dream.createdAt}
+          <img src={dateTime} alt="Date and Time" height="20px;" />
         </p>
-        <div className="card-body">
+        <div className="card-body m-2">
           <p>{dream.dreamText}</p>
         </div>
       </div>

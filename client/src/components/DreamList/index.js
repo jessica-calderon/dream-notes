@@ -24,12 +24,12 @@ const DreamList = ({ dreams, title }) => {
 
   return (
     <div className="container col-md-3 w-100 ">
-      <div className="w-100 ml-3">
+      <div className="w-100 ml-3 card card-3 mx-auto pt-3">
         <h3 className="text-large text-beige text-shadow">
           <img
             src={nightMoon}
             alt="Moon, clouds, and stars"
-            height="75px;"
+            height="60px;"
             className="mr-2"
           />
           {title}
@@ -49,7 +49,7 @@ const DreamList = ({ dreams, title }) => {
                 </Link>{" "}
                 dreamed on {dream.createdAt}
               </h2>
-              <div className="card__text">
+              <div className="pt-0 card__text">
                 <h2 className="card__text__link">
                   <Link to={`/dream/${dream._id}`}>
                     <h2 className="">

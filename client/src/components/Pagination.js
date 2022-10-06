@@ -8,7 +8,6 @@ const renderData = (data) => {
     })}
   </ul>;
 };
-
 function Pagination() {
   const [data, setData] = useState([]);
 

@@ -203,8 +203,9 @@ a {
   background-color: #ceb7e9;
 }
 @media only screen and (max-width: 768px) {
-  .form-card button span, span {
-    font-size: .7rem;
+  .form-card button span,
+  span {
+    font-size: 0.7rem;
   }
 }
 .input-style {
@@ -1031,6 +1032,12 @@ last-child {
 .text-shadow {
   text-shadow: 2px 2px var(--dark);
 }
+.text-glow {
+  text-shadow: 1px 1px 4px black;
+}
+.text-glow-white {
+  text-shadow: 1px 1px 4px white;
+}
 .text-med {
   font-size: 2rem;
 }
@@ -1070,7 +1077,7 @@ last-child {
 }
 @media only screen and (max-width: 768px) {
   .text-large {
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: bold;
     display: inline-block;
   }

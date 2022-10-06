@@ -3,7 +3,7 @@ import DreamList from "../components/DreamList";
 import DreamForm from "../components/DreamForm";
 import FriendList from "../components/FriendList";
 import cloudBubble from "../assets/img/cloudBubble.png";
-//import Pagination from '../components/Pagination2';
+import Pagination from "../components/Pagination";
 
 import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
@@ -18,8 +18,8 @@ const Home = () => {
 
   return (
     <main>
-      <div className="main p-5 min-80-vw">
-        <div className="text-large card w-100 display-inline-block card-3 p-3 mb-0 border-radius text-shadow text-beige ml-1">
+      <div className="main mb-4 p-5 min-80-vw">
+        <div className="text-large w-100 display-inline-block  p-3 mb-0 border-radius text-shadow text-beige text-center text-glow ml-1">
           Dream Notes{" "}
           <img src={cloudBubble} alt="cloud thinking bubble" width="75rem;" />
         </div>
@@ -49,9 +49,7 @@ const Home = () => {
         ) : null}
       </div>
 
-      {/* <Pagination
-       
-      /> */}
+      <Pagination />
     </main>
   );
 };

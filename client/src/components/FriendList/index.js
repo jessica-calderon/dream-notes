@@ -6,7 +6,7 @@ const FriendList = ({ friendCount, username, friends }) => {
   if (!friends || !friends.length) {
     return (
       <div className="card w-100 display-inline-block text-center card-4 mx-auto p-4">
-        <p className="text-dark text-med my-auto ">
+        <p className="text-dark text-glow-white text-med my-auto ">
           Hey <b>{username}</b>, make some friends!{" "}
         </p>
         <img

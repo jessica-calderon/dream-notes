@@ -24,7 +24,7 @@ const DreamList = ({ dreams, title }) => {
 
   return (
     <div className="container col-md-3 w-100 ">
-      <div className="w-100 ml-3 card card-3 mx-auto pt-3">
+      <div className="w-100 ml-3 card card-5 mx-auto pt-3">
         <h3 className="text-large text-beige text-shadow">
           <img
             src={nightMoon}

@@ -44,9 +44,10 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex min-100-vh">
+      <meta name="viewport" content="initial-scale=1" />
+        <div className="flex">
           <Header />
-          <div className="container">
+          <div className="container mb-5">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
@@ -59,7 +60,7 @@ function App() {
             </Routes>
           </div>
         </div>
-        <Footer />
+        <Footer className="mt-5 mb-0"/>
       </Router>
     </ApolloProvider>
   );

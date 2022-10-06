@@ -2,6 +2,7 @@ import React from "react";
 import DreamList from "../components/DreamList";
 import DreamForm from "../components/DreamForm";
 import FriendList from "../components/FriendList";
+import cloudBubble from "../assets/img/cloudBubble.png";
 //import Pagination from '../components/Pagination2';
 
 import Auth from "../utils/auth";
@@ -18,7 +19,10 @@ const Home = () => {
   return (
     <main>
       <div className="main p-5 min-80-vw">
-      <div className="text-large text-shadow text-beige ml-1">Dream Notes</div>
+        <div className="text-large text-shadow text-beige ml-1">
+          Dream Notes{" "}
+          <img src={cloudBubble} alt="cloud thinking bubble" width="75rem;" />
+        </div>
         {loggedIn && (
           <div className="DreamForm">
             <DreamForm />

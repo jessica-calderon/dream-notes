@@ -333,7 +333,7 @@ a {
 }
 .card__text {
   grid-row: 3/4;
-  font-weight: 400;
+  font-weight: 200rem;
   font-size: large;
   color: #000000;
 }
@@ -345,7 +345,7 @@ a {
 .card__text__link a {
   grid-row: 4/4;
   font-weight: 500;
-  font-size: larger;
+  font-size: 1em;
   text-decoration: none;
   color: #ffffff;
 }
@@ -475,7 +475,7 @@ a {
   margin-top: auto;
   padding: 1rem;
   color: var(--light);
-  position:static;
+  position: static;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -1046,7 +1046,7 @@ a {
 }
 
 .text-large {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 .text-bold {

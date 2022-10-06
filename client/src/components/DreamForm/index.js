@@ -59,10 +59,9 @@ const DreamForm = () => {
   };
 
   return (
-    <div className="containerDream cards">
-      <div className="form-card card-3 w-100 p-3 border-radius">
+      <div className="form-card card-3 mx-auto w-100 p-4 border-radius">
       <p
-        className={`mb-2 ${characterCount === 1280 || error ? "text-error" : ""}`}
+        className={`text-shadow mb-2 ${characterCount === 1280 || error ? "text-error" : ""}`}
       >
         <span className="text-beige text-bold m-2">Character Count: {characterCount}/1280</span><br />
         {error && <span className="ml-2">Something went wrong...</span>}
@@ -81,7 +80,6 @@ const DreamForm = () => {
           Share Your Dreams 💭
         </button>
       </form>
-    </div>
     </div>
   );
 };

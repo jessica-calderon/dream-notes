@@ -53,7 +53,7 @@ const Profile = (props) => {
     }
   };
   return (
-    <div className="cards align-center">
+    <div>
       <div className="text-center w-100  mx-auto profile-card card card-1">
         <h2 className="text-white text-shadow text-center display-inline-block">
           <img src={sleepZs} width="200px" alt="sleeping zs" />
@@ -68,6 +68,7 @@ const Profile = (props) => {
           </button>
         )}
       </div>
+      <br />
       <div className="flex-row justify-space-between mb-3">
         <div className="col-12 mb-3">
           <DreamList

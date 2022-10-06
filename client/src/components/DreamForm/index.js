@@ -77,7 +77,7 @@ const DreamForm = () => {
           onChange={handleChange}
         ></textarea><br />
         <button className="btn mt-2" type="submit">
-          Share Your Dreams 💭
+          <span>Share Your Dreams 💭</span>
         </button>
       </form>
     </div>

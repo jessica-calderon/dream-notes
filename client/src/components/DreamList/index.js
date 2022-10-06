@@ -29,8 +29,8 @@ const DreamList = ({ dreams, title }) => {
           <img
             src={nightMoon}
             alt="Moon, clouds, and stars"
+            className="mr-2 mobile-img"
             height="60px;"
-            className="mr-2"
           />
           {title}
         </h3>
@@ -38,7 +38,7 @@ const DreamList = ({ dreams, title }) => {
       <div className="row cards border-radius card-3 w-100 mx-auto justify-space-between mt-3">
         {dreams &&
           dreams.map((dream) => (
-            <div key={dream._id} className="card flex card-1">
+            <div key={dream._id} className="card flex card-1 pb-5">
               <h2 className="card__footer">
                 <Link
                   to={`/profile/${dream.username}`}

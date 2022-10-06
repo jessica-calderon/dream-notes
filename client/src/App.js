@@ -44,7 +44,6 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-      <meta name="viewport" content="initial-scale=1" />
         <div className="flex">
           <Header />
           <div className="container mb-5">

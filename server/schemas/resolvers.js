@@ -1,6 +1,8 @@
 const { User, Dream } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
+
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
@@ -35,6 +37,31 @@ const resolvers = {
     dream: async (parent, { _id }) => {
       return Dream.findOne({ _id });
     },
+    checkout: async () => {
+      const product = await stripe.products.create({name: '$1 Donation' });
+      const url = 'https://localhost:3001';
+      const price = await stripe.prices.create({
+        product: 'prod_MYl1b4gPre11OV',
+        unit_amount: 100,
+        currency: 'usd',
+      });
+      app.post('/create-checkout-session', async (req, res)=> {
+        const session = await stripe.checkout.sessions.create({
+          line_items: [
+            {
+            price: 'price_1LpdV4FuLGGbh7OBoQXVWi9o',
+            quantity: 1
+          },
+        ],
+          mode: 'payment',
+          
+          success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+          cancel_url: `${url}/`
+        });
+  
+        return { session };
+      });
+    }
   },
 
   Mutation: {

@@ -1,6 +1,7 @@
 import React from 'react';
 import github from '../../assets/img/octocat.svg';
 // import cloud from '../../assets/img/6.png';
+import Cart from '../Cart';
 const Footer = () => {
   return (
     <footer className="p-4 w-100 bg-dark footer text-center">
@@ -15,6 +16,12 @@ const Footer = () => {
         <a href="https://github.com/Anitinky13" alt="Anastasiya Litvinova Github"><img src={github} className="mr-2" width="25px" alt="github octocat"/></a> 
         <a href="https://github.com/Wumbo-dot" alt="JT Gutierrez Github"><img src={github} className="" width="25px" alt="github octocat"/></a></div>
       </div>
+      <div>
+      <section className="container">
+        <Cart />
+      </section>
+      </div>
+
     </footer>
   );
 };

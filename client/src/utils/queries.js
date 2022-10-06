@@ -98,4 +98,13 @@ query dreams($username: String) {
       }
     }
   `;
-  
+
+  export const QUERY_CHECKOUT = gql`
+{
+  getCheckout {
+    products: prod_MYl1b4gPre11OV {
+      session: sk_test_51LpdIaFuLGGbh7OBppdOfwpUZJoPacZ9rOKzDt2p5ZAEPk6fepcxLljwKjrYmXlOefkPgW9yHOm14s0ozIsgyBVy00kYw7xZ5a
+    } 
+    }
+  }
+  `;

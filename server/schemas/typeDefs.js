@@ -28,6 +28,7 @@ const typeDefs = gql`
     user(username: String!): User
     dreams(username: String): [Dream]
     dream(_id: ID!): Dream
+    checkout(products: [ID]!): Checkout
   }
   type Mutation {
     login(email: String!, password: String!): Auth
@@ -39,6 +40,11 @@ const typeDefs = gql`
   type Auth {
     token: ID!
     user: User
+  }
+
+  
+  type Checkout {
+    session: ID
   }
 `;
 
